@@ -1,11 +1,361 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sequestro de Carbono em Sistemas Agrícolas</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body{
+    background: #f4fff4;
+    color:#333;
+}
+
+header{
+    background: linear-gradient(135deg,#2e7d32,#66bb6a);
+    color:white;
+    text-align:center;
+    padding:60px 20px;
+}
+
+header h1{
+    font-size:3rem;
+}
+
+header p{
+    margin-top:15px;
+    font-size:1.2rem;
+}
+
+.hero-img{
+    width:100%;
+    height:450px;
+    object-fit:cover;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:40px 20px;
+}
+
+.section-title{
+    text-align:center;
+    color:#2e7d32;
+    margin-bottom:30px;
+    font-size:2rem;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+    transition:.3s;
+    cursor:pointer;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card h3{
+    color:#388e3c;
+    margin-bottom:10px;
+}
+
+.stats{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    flex-wrap:wrap;
+    margin-top:30px;
+}
+
+.stat{
+    text-align:center;
+}
+
+.number{
+    font-size:3rem;
+    color:#2e7d32;
+    font-weight:bold;
+}
+
+.quiz{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.question{
+    margin-bottom:20px;
+}
+
+button{
+    background:#2e7d32;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#1b5e20;
+}
+
+.result{
+    margin-top:20px;
+    font-size:1.2rem;
+    font-weight:bold;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:20px;
+}
+
+.gallery img{
+    width:100%;
+    border-radius:15px;
+    height:250px;
+    object-fit:cover;
+}
+
+footer{
+    background:#2e7d32;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+}
+</style>
 </head>
 <body>
-    <p> MEU NOME É KAUANE</p>
+
+<header>
+    <h1>🌱 Sequestro de Carbono em Sistemas Agrícolas</h1>
+    <p>Como a agricultura pode ajudar a combater as mudanças climáticas.</p>
+</header>
+
+<img class="hero-img"
+src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1500&q=80">
+
+<section class="container">
+    <h2 class="section-title">O que é Sequestro de Carbono?</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>🌾 Conceito</h3>
+            <p>
+                Processo pelo qual o carbono atmosférico é capturado e armazenado
+                no solo e na vegetação.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>🌳 Benefícios</h3>
+            <p>
+                Reduz gases de efeito estufa, melhora a fertilidade do solo e aumenta
+                a sustentabilidade agrícola.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>🚜 Técnicas</h3>
+            <p>
+                Plantio direto, rotação de culturas, agroflorestas e integração
+                lavoura-pecuária-floresta.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>🌎 Impacto Global</h3>
+            <p>
+                Contribui para a mitigação das mudanças climáticas e segurança alimentar.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<section class="container">
+
+<h2 class="section-title">Estatísticas</h2>
+
+<div class="stats">
+    <div class="stat">
+        <div class="number" id="num1">0</div>
+        <p>Toneladas de CO₂ capturadas</p>
+    </div>
+
+    <div class="stat">
+        <div class="number" id="num2">0</div>
+        <p>% de melhoria do solo</p>
+    </div>
+
+    <div class="stat">
+        <div class="number" id="num3">0</div>
+        <p>Milhões de hectares sustentáveis</p>
+    </div>
+</div>
+
+</section>
+
+<section class="container">
+<h2 class="section-title">Galeria Agro</h2>
+
+<div class="gallery">
+
+<img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1200&q=80">
+
+<img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=1200&q=80">
+
+<img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80">
+
+</div>
+</section>
+
+<section class="container">
+
+<h2 class="section-title">Quiz Interativo</h2>
+
+<div class="quiz">
+
+<div class="question">
+<p>1. O que é sequestro de carbono?</p>
+
+<label>
+<input type="radio" name="q1" value="certo">
+ Captura e armazenamento de carbono.
+</label><br>
+
+<label>
+<input type="radio" name="q1" value="errado">
+ Emissão de carbono para atmosfera.
+</label>
+</div>
+
+<div class="question">
+<p>2. Qual prática ajuda no sequestro de carbono?</p>
+
+<label>
+<input type="radio" name="q2" value="certo">
+ Plantio direto.
+</label><br>
+
+<label>
+<input type="radio" name="q2" value="errado">
+ Queimadas agrícolas.
+</label>
+</div>
+
+<div class="question">
+<p>3. Sistemas agroflorestais ajudam a:</p>
+
+<label>
+<input type="radio" name="q3" value="certo">
+ Armazenar carbono.
+</label><br>
+
+<label>
+<input type="radio" name="q3" value="errado">
+ Aumentar emissões.
+</label>
+</div>
+
+<button onclick="corrigirQuiz()">Ver Resultado</button>
+
+<div class="result" id="resultado"></div>
+
+</div>
+
+</section>
+
+<section class="container">
+
+<h2 class="section-title">Importância para o Futuro</h2>
+
+<p style="text-align:center;font-size:1.1rem;line-height:1.8;">
+A agricultura moderna tem papel fundamental na mitigação das mudanças climáticas.
+Práticas sustentáveis permitem que o solo funcione como um reservatório natural
+de carbono, reduzindo a concentração de CO₂ na atmosfera e promovendo maior
+produtividade agrícola.
+</p>
+
+</section>
+
+<footer>
+🌱 Projeto Educacional - Sustentabilidade e Agronomia
+</footer>
+
+<script>
+
+function animar(id, final, tempo){
+
+let valor = 0;
+let incremento = final / 100;
+
+let intervalo = setInterval(() => {
+
+valor += incremento;
+
+if(valor >= final){
+valor = final;
+clearInterval(intervalo);
+}
+
+document.getElementById(id).innerText =
+Math.floor(valor);
+
+}, tempo);
+
+}
+
+animar("num1",500,20);
+animar("num2",80,25);
+animar("num3",120,20);
+
+function corrigirQuiz(){
+
+let pontos = 0;
+
+let respostas = ["q1","q2","q3"];
+
+respostas.forEach(q => {
+
+let selecionado =
+document.querySelector(`input[name="${q}"]:checked`);
+
+if(selecionado && selecionado.value==="certo"){
+pontos++;
+}
+
+});
+
+document.getElementById("resultado").innerHTML =
+`Você acertou ${pontos} de 3 questões! 🌿`;
+
+}
+
+</script>
+
 </body>
 </html>
